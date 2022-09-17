@@ -11,7 +11,7 @@ public class Seat {
     private int SeatUniqueID;
 
     @Column(name="building")
-    private int Building;
+    private String Building;
 
     @Column(name="floor")
     private int Floor;
@@ -24,7 +24,7 @@ public class Seat {
 
     public Seat() {}
 
-    public Seat(int building, int floor, String wing, String seatNo) {
+    public Seat(String building, int floor, String wing, String seatNo) {
         Building = building;
         Floor = floor;
         Wing = wing;
@@ -39,11 +39,11 @@ public class Seat {
         SeatUniqueID = seatUniqueID;
     }
 
-    public int getBuilding() {
+    public String getBuilding() {
         return Building;
     }
 
-    public void setBuilding(int building) {
+    public void setBuilding(String building) {
         Building = building;
     }
 
