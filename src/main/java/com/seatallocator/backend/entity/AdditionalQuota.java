@@ -1,24 +1,28 @@
 package com.seatallocator.backend.entity;
 
+import com.seatallocator.backend.converter.StringSetConverter;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="additional_quota")
 public class AdditionalQuota {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name="quota_id")
     private int QuotaID;
 
     @Column(name="manager_id")
     private int ManagerId;
 //obtain list of seats with link to seats table
-    /*
+
     @Column(name="seat_ids_list")
-    private List<String> SeatIds;*/
+    @Convert(converter = StringSetConverter.class)
+    private Set<String> SeatIds;
 
     @Column(name="date_time_stamp")
     private Date DateTimeStamp;

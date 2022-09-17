@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Office {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name="building_id")
     private int BuildingID;
 

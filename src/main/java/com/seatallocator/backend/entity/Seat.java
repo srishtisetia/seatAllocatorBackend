@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Seat {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name="seat_unique_id")
     private int SeatUniqueID;
 

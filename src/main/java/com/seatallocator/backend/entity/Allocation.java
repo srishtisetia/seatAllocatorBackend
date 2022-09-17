@@ -8,7 +8,7 @@ import java.util.Date;
 public class Allocation {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name="allocation_id")
     private int AllocationID;
 
