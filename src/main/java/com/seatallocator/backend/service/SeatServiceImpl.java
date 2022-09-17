@@ -22,6 +22,16 @@ public class SeatServiceImpl implements SeatService {
 		return seatRepository.findAll();
 	}
 
+	@Override
+	public Seat addSeat(Seat s) {
+		return seatRepository.save(s);
+	}
+
+	@Override
+	public void delete(Seat s) {
+		 seatRepository.delete(s);
+	}
+
 }
 
 
